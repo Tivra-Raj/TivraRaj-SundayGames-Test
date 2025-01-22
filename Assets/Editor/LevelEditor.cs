@@ -8,6 +8,46 @@ public class LevelEditor : Editor
     {
         Level level = (Level)target;
 
+        DrawDefaultInspector();
+
+        if (level.GridData == null)
+        {
+            return;
+        }
+
+        EditorGUILayout.LabelField("Grid Setup", EditorStyles.boldLabel);
+
+        int index = 0;
+        for (int row = 0; row < level.Rows; row++)
+        {
+            EditorGUILayout.BeginHorizontal();
+            for (int col = 0; col < level.Coloms; col++)
+            {
+                if (index < level.GridData.Length)
+                {
+                    level.GridData[index].brickType = (BrickTypeEnum)EditorGUILayout.EnumPopup(level.GridData[index].brickType, GUILayout.Width(80));
+                    index++;
+                }
+            }
+            EditorGUILayout.EndHorizontal();
+        }
+
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(level);
+        }
+    }
+}
+/*using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(Level))]
+public class LevelEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        Level level = (Level)target;
+
         // Track the old values of rows and columns
         int oldRows = level.Rows;
         int oldColoms = level.Coloms;
@@ -18,7 +58,7 @@ public class LevelEditor : Editor
         // Check if rows or columns have been changed
         if (oldRows != level.Rows || oldColoms != level.Coloms)
         {
-            level.InitializeGrid();  // Recreate the grid with updated dimensions
+            //level.InitializeGrid();  // Recreate the grid with updated dimensions
             EditorUtility.SetDirty(level);
         }
 
@@ -27,8 +67,10 @@ public class LevelEditor : Editor
         {
             if (GUILayout.Button("Create Grid"))
             {
+#if UNITY_EDITOR
                 level.InitializeGrid();  // Create or recreate the grid with updated dimensions
                 EditorUtility.SetDirty(level);
+#endif
             }
 
             // Render the grid editor if it's initialized
@@ -87,4 +129,4 @@ public class LevelEditor : Editor
         return names;
     }
 
-}
+}*/

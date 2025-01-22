@@ -12,6 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8eeb5a9970985742b3bcc37a788cad0, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  rows: 3
-  coloms: 5
-  blocks: []
+  rows: 6
+  coloms: 3
+  slotPrefab: {fileID: 2609956169457979657, guid: 08621fb8497d2fe49aa31c44ec4f2250, type: 3}
+  gridData:
+  - brickType: 0
+  - brickType: 2
+  - brickType: 0
+  - brickType: 0
+  - brickType: 1
+  - brickType: 0
+  - brickType: 0
+  - brickType: 1
+  - brickType: 0
+  - brickType: 0
+  - brickType: 1
+  - brickType: 0
+  - brickType: 0
+  - brickType: 1
+  - brickType: 0
+  - brickType: 0
+  - brickType: 1
+  - brickType: 0

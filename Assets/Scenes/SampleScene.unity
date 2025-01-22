@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -225,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941854076}
   - component: {fileID: 941854077}
+  - component: {fileID: 941854078}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941854075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38712b44056acb74f8d3a9b1007a8ae1, type: 3}
   m_Name: 
@@ -263,6 +263,20 @@ MonoBehaviour:
   level: 0
   cellSize: 0.4
   tilePefab: {fileID: 46254999282234, guid: 1d8230fa697b3aa4ebe3a258f503e355, type: 3}
+--- !u!114 &941854078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941854075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991569f840b3a00478cf8a4f56f7a28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelData: {fileID: 11400000, guid: 82df8c476c30a554e9f089ec2de51ae4, type: 2}
+  slotSpacing: {x: 1, y: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

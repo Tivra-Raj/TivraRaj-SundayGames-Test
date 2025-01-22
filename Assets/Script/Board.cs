@@ -40,12 +40,12 @@ public class Board : MonoBehaviour
                 //GameObject tile = Instantiate(tilePefab, tilePosition, Quaternion.identity);
                 //tile.transform.SetParent(this.transform, false);
 
-                GameObject blockPrefab = levelHolder.Levels[level].GetBlockAt(i, j);
+                /*GameObject blockPrefab = levelHolder.Levels[level].GetBlockAt(i, j);
                 if (blockPrefab != null)
                 {
                     Vector3 blockPosition = new Vector3(j * cellSize, -i * cellSize, 0);
                     Instantiate(blockPrefab, blockPosition, Quaternion.identity, this.transform);
-                }
+                }*/
 
             }
         }
